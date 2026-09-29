@@ -1,0 +1,11 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+body { background:#050505; color:#fff; font-family:Inter,system-ui,sans-serif; }
+@layer components {
+  .card { @apply bg-card border border-line p-5 transition-colors duration-200; }
+  .lbl { @apply text-[11px] uppercase tracking-widest text-t3 font-semibold; }
+  .btn { @apply bg-sig text-bg font-semibold text-sm uppercase tracking-wide px-5 py-3 transition duration-200 hover:bg-sig2 disabled:opacity-40 disabled:cursor-not-allowed focus-visible:outline focus-visible:outline-2 focus-visible:outline-sig2; }
+  .btn2 { @apply bg-card border border-[#333] text-white text-sm px-4 py-2 transition duration-200 hover:border-sig; }
+  .inp { @apply bg-[#090909] border border-[#292929] text-white px-3 py-2 w-full outline-none transition duration-200 focus:border-sig; }
+}
+@keyframes slide { 0%{left:-40%} 100%{left:100%} }
+@media (prefers-reduced-motion: reduce) { * { animation:none !important; transition:none !important; } }
